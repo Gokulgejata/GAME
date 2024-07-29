@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Number Game
+</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>GUESS THE NUMBER</h1>
+<input id="guessnumber"placeholder="Enter the Number">
+<button onclick="guessing()">check</button>
+<p id="result">Your guess is correct/wrong</p>
+<p id="score">Score:10</p>
+<script>
+    var guessnumber=document.getElementById("guessnumber")
+var result=document.getElementById("result")
+var Score=document.getElementById("score")
+var randomnumber=Math.floor(Math.random()*10)+1
+var totalscore=10
+function guessing()
+{
+if(randomnumber==guessnumber)
+  {
+    console.log("right")
+    result.textContent="Your guess is correct"
+    alert("YOU WON")
+  }
+  else
+  {
+    console.log("wrong")
+    result.textContent="Your guess is wrong"
+    alert ("TRY AGAIN")
+    totalscore=totalscore-1
+    Score.textContent="score:"+totalscore
+
+  }
+}
+</script>
+</body>
+</html>
