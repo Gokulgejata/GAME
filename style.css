@@ -1,34 +1,123 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    background-color: black;
-
+/* Apply a global reset for margin and padding, and set background color */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
 
+body {
+    background-color: #f9f9f9; /* Very light gray background */
+    font-family: 'Baloo 2', cursive; /* Playful font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main heading styling */
+h1 {
     text-align: center;
-    background-color: aqua;
+    background-color: #ff6f61; /* Bright coral background */
     padding: 20px;
-    color: white;
+    color: #ffffff; /* White text color */
+    font-size: 2.5em; /* Larger font size for better readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px;
 }
-#guessnumber,button
-{
-   color: white;
-   border-width: 2%;
-   border-color: white;
-   border-style: solid;
-   margin: 30px;
-   display: inline-flex;
-   flex-wrap: wrap;
-   text-align: center;
-   padding: 10px;
-   justify-content:;
-}
-#result
-{
-    color: white;
+
+/* Center the input and button container */
+.foralign {
     text-align: center;
-    margin: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Style for input and buttons */
+#guessnumber, button {
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 15px 20px; /* Add padding for better button size */
+    margin: 10px;
+    background-color: #ffcccb; /* Light coral background */
+    font-size: 1em; /* Font size for readability */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s;
+}
 
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6f61; /* Bright coral on hover */
+}
+
+/* Style for result and score text */
+#result, #score {
+    color: #333333; /* Dark gray text color */
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.2em; /* Slightly larger font size for visibility */
+}
+
+/* Ensures footer or additional content sticks to the bottom if there is not enough content */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Media Queries for responsiveness */
+
+/* For devices with a max width of 768px (tablets) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        padding: 15px;
+    }
+
+    .foralign {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #guessnumber, button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    #result, #score {
+        font-size: 1em;
+    }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .foralign {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #guessnumber, button {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+
+    #result, #score {
+        font-size: 0.9em;
+    }
+}
